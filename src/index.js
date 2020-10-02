@@ -40,9 +40,10 @@ const MORSE_TABLE = {
 function decode(expr) {
    let arr=expr.split("**********");
     let arr2=[];
-for(let i=0;i<arr.length;i++)
-    for(let y=0;y<arr[i].length;y++){
-        arr2.push([]);
+for(let i=0;i<arr.length;i++){
+      arr2.push([]);
+    for(let y=0;y<arr[i].length;y++)
+      
         if(y%2===0)
             arr2[i].push(arr[i].slice(y,y+2))
     }
