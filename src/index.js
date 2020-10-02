@@ -58,7 +58,7 @@ for(let i=0;i<arr.length;i++){
             temp.push(arr2[i].slice(y,y+10))
             
             
-            temp.filter(a=>{if(this.MORSE_TABLE[a]) return this.MORSE_TABLE[a]});
+            temp.filter(a=>{if(MORSE_TABLE[a]) return MORSE_TABLE[a]});
             arr2[i]=temp.join("");
             temp.splice(0);
         }
