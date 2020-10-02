@@ -61,7 +61,7 @@ for(let i=0;i<arr.length;i++){
                 temp.splice(0);
             }
     }
-    
+    console.log(arr2)
     for(let i=0;i<arr2.length;i++){
     for(let y=0;y<arr2[i].length;y++)
         if(MORSE_TABLE[arr2[i][y]])arr2[i][y]=MORSE_TABLE[arr2[i][y]];
