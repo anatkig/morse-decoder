@@ -46,7 +46,7 @@ for(let i=0;i<arr.length;i++)
         if(y%2===0)
             arr2[i].push(arr[i].slice(y,y+2))
     }
-     arr2.map(a=>a.map(b=>parseInt(b).filter(c=>{if(c===10)return "."; else if(c===11)return "-"}));
+     arr2.map(a=>a.map(b=>parseInt(b).filter(c=>{if(c===10)return "."; else if(c===11)return "-"})));
               console.log(arr2)
 }
 
