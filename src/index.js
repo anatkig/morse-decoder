@@ -49,10 +49,22 @@ for(let i=0;i<arr.length;i++){
             arr2[i].push(arr[i].slice(y,y+2))
     }
      arr2.map(a=>a.filter(c=>{if(parseInt(c)===10)return "."; else if(parseInt(c)===11)return "-"; else return " "}).join(""));
-              
     
+    let temp=[];
     
+        for(let i=0;i<arr2.length;i++){
+    for(let y=0;y<arr2[i].length;y++)      
+    if(y%10===0)
+            temp.push(arr[i].slice(y,y+10))
+            
+            
+            temp.filter(a=>{if(this.MORSE_TABLE[a]) return this.MORSE_TABLE[a]});
+            arr2[i]=temp.join("");
+            temp.splice(0);
+        }
+    return arr2.join(" ");
 }
+
 
 module.exports = {
     decode
