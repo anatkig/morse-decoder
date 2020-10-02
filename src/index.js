@@ -53,7 +53,7 @@ for(let i=0;i<arr.length;i++){
         let   temp=[];
         for(let z=0;z<arr2[x].length;z++)
             for(let u=0;u<arr2[x][z].length;u++){
-            if(u%2===0){if(parseInt(arr2[x][z].slice(u,u+2)===10) temp.push(".");
+            if(u%2===0){if(parseInt(arr2[x][z].slice(u,u+2))===10) temp.push(".");
                         else if(arr2[x][z].slice(u,u+2)===11) temp.push("-");
    
                        }
