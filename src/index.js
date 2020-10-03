@@ -55,8 +55,9 @@ arr.push(expr.slice(i,i+10))
            if(y%2===0) parseInt(arr[i].slice(y,y+2))===10?sign=".":parseInt(arr[i].slice(y,y+2))===11?sign="-":sign="";
         temp.push(sign);
 
-  throw Error(temp)
+ 
     }//for y
+             throw Error(temp)
             arr[i]=temp.join("");
             temp.length=0;
         }//else
