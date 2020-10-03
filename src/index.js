@@ -55,7 +55,7 @@ function decode(expr) {
         return newStr;
       });
     }
-    return orse(chars).map(a => MORSE_TABLE[a]).join('')
+    return orse(chrs).map(a => MORSE_TABLE[a]).join('')
 }
 
 module.exports = {
