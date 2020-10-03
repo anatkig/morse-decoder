@@ -52,7 +52,7 @@ arr.push(expr.slice(i,i+10))
              if(i%2===0){
 arr2.push(arr[i].slice(y,y+2))
              }//if
-         arr[i]=arr2.map(a=>{a==="10"?return ".":a==="11"?return "-":return " "})
+         arr[i]=arr2.map(a=>{a==="10"?".":a==="11"?"-":" "})
      }//for
     return arr.join("").split(" ").join(" ");
 }
