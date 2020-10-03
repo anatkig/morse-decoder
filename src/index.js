@@ -46,7 +46,8 @@ let arr=[];
         else {
                  let temp=[];
                  for(let y=0;y<arr[i].length;y++){
-           if(y%2===0) let sign=parseInt(arr[i].slice(y,y+2))===10?".":parseInt(arr[i].slice(y,y+2))===11?"-":"";
+                     let sign="";
+           if(y%2===0) sign=parseInt(arr[i].slice(y,y+2))===10?".":parseInt(arr[i].slice(y,y+2))===11?"-":"";
         temp.push(sign);
 
 
