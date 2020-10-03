@@ -44,7 +44,7 @@ let arr=[];
         if(i%10===0){
 
 arr.push(expr.slice(i,i+10))
-             throw Error(arr[i],arr[i],arr[i],arr[i],arr[i],arr[i],arr[i])
+             throw Error(arr[i])
                  if(arr[i]==="**********")arr[i]=" ";
         else {
            
