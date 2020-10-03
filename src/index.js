@@ -49,6 +49,7 @@ arr.push(expr.slice(i,i+10))
         else {
            
                  let temp=[];
+            if(arr[i])
                  for(let y=0;y<arr[i].length;y++){
                      let sign="";
                      
