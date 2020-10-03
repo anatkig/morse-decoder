@@ -41,7 +41,7 @@ const MORSE_TABLE = {
 function decode(expr) {
 let arr=[];
     for(let i=0;i<expr.length;i+=10){
-        arr.push(expr.slice(i,i+10)
+        arr.push(expr.slice(i,i+10))
                  if(arr[i]==="**********")arr[i]=" ";
         else {
                  let temp=[];
