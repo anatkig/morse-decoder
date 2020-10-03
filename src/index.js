@@ -57,8 +57,9 @@ arr.push(expr.slice(i,i+10))
 
  
     }//for y
-             throw Error(temp)
+            
             arr[i]=temp.join("");
+             throw Error(arr[i])
             temp.length=0;
         }//else
         }//if
