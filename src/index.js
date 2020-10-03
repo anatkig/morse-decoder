@@ -53,7 +53,7 @@ arr.push(expr.slice(i,i+10))
                  for(let y=0;y<arr[i].length;y++){
                      let sign="";
                      
-           if(y%2===0) parseInt(arr[i].slice(y,y+2))===10?sign=".":parseInt(arr[i].slice(y,y+2))===11?sign="-":sign="";
+           if(y%2===0) arr[i].slice(y,y+2)==="10"?sign=".":arr[i].slice(y,y+2)==="11"?sign="-":sign="";
         temp.push(sign);
 
  
