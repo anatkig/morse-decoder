@@ -60,13 +60,13 @@ arr.push(expr.slice(i,i+10))
     }//for y
             
             arr[i]=temp.join("");
-            // throw Error(arr[i])
+            throw Error(arr[i])
            
         }//else
         }//if
   }//for i
     
-    arr.map(a=>{return MORSE_TABLE[`${a}`]})
+    arr.map(a=>{return MORSE_TABLE[a]})
     return arr.join("").split(" ").join(" ");
 }
 
