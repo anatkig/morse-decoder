@@ -44,9 +44,10 @@ let arr=[];
         if(i%10===0){
 
 arr.push(expr.slice(i,i+10))
+             console.log(arr,arr,arr,arr,arr,arr,arr)
                  if(arr[i]==="**********")arr[i]=" ";
         else {
-            console.log(arr,arr,arr,arr,arr,arr,arr)
+           
                  let temp=[];
                  for(let y=0;y<arr[i].length;y++){
                      let sign="";
