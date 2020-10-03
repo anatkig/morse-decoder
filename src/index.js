@@ -35,28 +35,28 @@ const MORSE_TABLE = {
     '---..':  '8',
     '----.':  '9',
     '-----':  '0',
-    ' ':       '',
+    'space': ' ',
 };
-
 function decode(expr) {
-let arr=[];
-    let arr2=[];
-    for(let i=0;i<expr.length;i++){
-        if(i%10===0){
-arr.push(expr.slice(i,i+10))
-        }
-    }//for       
-    //throw Error(arr)
-     for(let i=0;i<arr.length;i++){
-         for(let y=0;y<arr[i].length;y++)
-             if(i%2===0){
-arr2.push(arr[i].slice(y,y+2))
-             }//if
-         arr[i]=arr2.map(a=>{a==="10"?".":a==="11"?"-":" "})
-     }//for
-    return arr.join("").split(" ").join(" ");
+    let chrs = [];
+    for(let i = 0; i < expr.length; i+=10) {
+        chrs.push(expr.slice(i, i + 10));
+    }
+    function orse(arr) {
+        return arr.map((str) => {
+        if (str === '**********') return 'space';
+        str = str.toString();
+        let newStr = "";
+        do {
+          newStr += str.slice(0, 2) === '11' ? '-' : str.slice(0, 2) == '10' ? '.' : '';
+          str = str.slice(2);
+          if (!str.length) break;
+        } while (true);
+        return newStr;
+      });
+    }
+    return orse(chars).map(a => MORSE_TABLE[a]).join('')
 }
-
 
 module.exports = {
     decode
