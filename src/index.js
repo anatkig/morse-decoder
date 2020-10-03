@@ -38,37 +38,9 @@ const MORSE_TABLE = {
 };
 
 function decode(expr) {
-   let arr=expr.split("**********");
-    let arr2=[];
-    let arr3=[];
-for(let i=0;i<arr.length;i++){
-      arr2.push([]);
-    for(let y=0;y<arr[i].length;y++)
-      
-        if(y%10===0)
-            arr2[i].push(arr[i].slice(y,y+10))
-    }
-  
-    for(let x=0;x<arr2.length;x++){
-        let   temp=[];
-        for(let z=0;z<arr2[x].length;z++)
-            for(let u=0;u<arr2[x][z].length;u++){
-            if(u%2===0){if(parseInt(arr2[x][z].slice(u,u+2))===10) temp.push(".");
-                        else if(parseInt(arr2[x][z].slice(u,u+2))===11) temp.push("-");
-   
-                       }
-                arr2[x][z]=temp.join("");
-                temp.splice(0);
-            }
-    }
-    console.log(arr2)
-    for(let i=0;i<arr2.length;i++){
-   
-        if(MORSE_TABLE[arr2[i]])arr2[i]=MORSE_TABLE[arr2[i]];
-                                                          
-                                                         
-                                                          }
-    return arr2.join(" ");
+let arr=[];
+    for(let i=0;i<expr.length;i+=10)
+        arr.push(expr.slice(i,i+10)
 }
 
 
