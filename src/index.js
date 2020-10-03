@@ -51,11 +51,11 @@ arr.push(expr.slice(i,i+10))
                  let temp=[];
                  for(let y=0;y<arr[i].length;y++){
                      let sign="";
-                       throw Error(arr[i].length)
+                     
            if(y%2===0) parseInt(arr[i].slice(y,y+2))===10?sign=".":parseInt(arr[i].slice(y,y+2))===11?sign="-":sign="";
         temp.push(sign);
 
-
+  throw Error(arr[i].length)
     }//for y
             arr[i]=temp.join("");
             temp.length=0;
