@@ -66,7 +66,7 @@ arr.push(expr.slice(i,i+10))
         }//if
   }//for i
     
-    arr.map(a=>MORSE_TABLE[a])
+    arr.map(a=>{return MORSE_TABLE[a]])
     return arr.join("").split(" ").join(" ");
 }
 
