@@ -35,12 +35,29 @@ const MORSE_TABLE = {
     '---..':  '8',
     '----.':  '9',
     '-----':  '0',
+    ' ':       " "
 };
 
 function decode(expr) {
 let arr=[];
-    for(let i=0;i<expr.length;i+=10)
+    for(let i=0;i<expr.length;i+=10){
         arr.push(expr.slice(i,i+10)
+                 if(arr[i]==="**********")arr[i]=" ";
+        else {
+                 let temp=[];
+                 for(let y=0;y<arr[i].length;y+=2){
+            let sign=parseInt(arr[i].slice(y,y+2))===10?".":parseInt(arr[i].slice(y,y+2))===11?"-":"";
+        temp.push(sign);
+
+
+    }//for y
+            arr[i]=temp.join("");
+            temp.length=0;
+        }//else
+  }//for i
+    
+    arr.map(a=>MORSE_TABLE[a])
+    return arr.join("").split(" ");
 }
 
 
