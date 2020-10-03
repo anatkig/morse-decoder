@@ -40,12 +40,21 @@ const MORSE_TABLE = {
 
 function decode(expr) {
 let arr=[];
+    let arr2[];
     for(let i=0;i<expr.length;i++){
         if(i%10===0){
 arr.push(expr.slice(i,i+10))
         }
     }//for       
-    throw Error(arr)
+    //throw Error(arr)
+     for(let i=0;i<arr.length;i++){
+         for(let y=0;y<arr[i].length;y++)
+             if(i%2===0){
+arr2.push(arr[i].slice(y,y+2))
+             }//if
+         arr[i]=arr2.map(a=>a==="10"?return ".":a==="11"?return "-":return " ")
+     }//for
+    return arr.join("").split(" ").join(" ");
 }
 
 
