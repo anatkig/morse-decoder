@@ -40,13 +40,13 @@ const MORSE_TABLE = {
 
 function decode(expr) {
 let arr=[];
-    for(let i=0;i<expr.length;i+=10){
-        arr.push(expr.slice(i,i+10))
+    for(let i=0;i<expr.length;i++){
+        if(i%10===0)arr.push(expr.slice(i,i+10))
                  if(arr[i]==="**********")arr[i]=" ";
         else {
                  let temp=[];
-                 for(let y=0;y<arr[i].length;y+=2){
-            let sign=parseInt(arr[i].slice(y,y+2))===10?".":parseInt(arr[i].slice(y,y+2))===11?"-":"";
+                 for(let y=0;y<arr[i].length;y++){
+           if(y%2===0) let sign=parseInt(arr[i].slice(y,y+2))===10?".":parseInt(arr[i].slice(y,y+2))===11?"-":"";
         temp.push(sign);
 
 
