@@ -44,10 +44,10 @@ let arr=[];
         if(i%10===0){
 
 arr.push(expr.slice(i,i+10))
-             throw Error(arr[i])
+           
                  if(arr[i]==="**********")arr[i]=" ";
         else {
-           
+             throw Error(arr[i])
                  let temp=[];
                  for(let y=0;y<arr[i].length;y++){
                      let sign="";
